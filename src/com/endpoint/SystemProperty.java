@@ -1,7 +1,6 @@
 package com.endpoint;
 
 import java.util.Objects;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -19,7 +18,7 @@ public class SystemProperty {
 		  if (Objects.isNull(property) || Objects.isNull(valor)) {
 			    throw new WebApplicationException(
 			      Response.status(Response.Status.BAD_REQUEST)
-			        .entity("parameter is mandatory")
+			        .entity("Parametro property y value son obligatorios")
 			        .build()
 			    );
 		  }
